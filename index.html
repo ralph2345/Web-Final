@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopee-like Layout</title>
+    <title>Quantify</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-<hash>" crossorigin="anonymous" />
+
 
     <style>
 
@@ -19,8 +21,6 @@
             padding: 0;
 
         }
-
- 
 
         header {
 
@@ -204,6 +204,11 @@
 
         }
 
+        .product-image {
+            width: 200px;
+            height: auto; 
+        }
+
  
 
         .product-title {
@@ -224,6 +229,15 @@
 
         }
 
+        .logo {
+            width: 50px; 
+            height: auto; 
+            margin-right: 10px; 
+        }
+
+        .stifooterbg {
+            background-color: #00306E;
+        }
     </style>
 
 </head>
@@ -238,7 +252,10 @@
 
             <div class="container-fluid">
 
-                <a class="navbar-brand" href="#">Shopee</a>
+                <a class="navbar-brand" href="#">
+                    <img src="https://schoolconnect.sti.edu/images/sti-logo.png" alt="Logo" class="logo">
+                    Quantify
+                </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -305,13 +322,13 @@
 
                 <div class="product">
 
-                    <img src="product-image.jpg" class="card-img-top" alt="Product Image">
+                    <img src="https://www.sti.edu/img/models/2018-model-ict.png" class="card-img-top product-image" alt="Product Image">
 
                     <div class="card-body">
 
-                        <h5 class="card-title">Product Name</h5>
+                        <h5 class="card-title">BSIT Uniform</h5>
 
-                        <p class="card-text">$19.99</p>
+                        <p class="card-text">Php 850.00</p>
 
                     </div>
 
@@ -319,13 +336,13 @@
 
                 <div class="product">
 
-                    <img src="product-image.jpg" class="card-img-top" alt="Product Image">
+                    <img src="https://www.sti.edu/images/2023/2ndsem/modelshs3.png" class="card-img-top product-image" alt="Product Image">
 
                     <div class="card-body">
 
-                        <h5 class="card-title">Product Name</h5>
+                        <h5 class="card-title">SHS Uniform</h5>
 
-                        <p class="card-text">$19.99</p>
+                        <p class="card-text">Php 699.00</p>
 
                     </div>
 
@@ -333,92 +350,105 @@
 
                 <div class="product">
 
-                    <img src="product-image.jpg" class="card-img-top" alt="Product Image">
+                    <img src="https://cdn.shopify.com/s/files/1/0248/7910/4072/files/7_2798bc8d-3345-4a64-bb30-e8603c9da930.jpg?v=1618217034" class="card-img-top product-image" alt="Product Image">
 
                     <div class="card-body">
 
-                        <h5 class="card-title">Product Name</h5>
+                        <h5 class="card-title">CODM DBTK</h5>
 
-                        <p class="card-text">$19.99</p>
+                        <p class="card-text">Php 1200.00</p>
 
                     </div>
 
                 </div>
 
-                <div class="product">
-
-                    <img src="product-image.jpg" class="card-img-top" alt="Product Image">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">Product Name</h5>
-
-                        <p class="card-text">$19.99</p>
-
-                    </div>
-
-                </div>
-
-                <div class="product">
-
-                    <img src="product-image.jpg" class="card-img-top" alt="Product Image">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">Product Name</h5>
-
-                        <p class="card-text">$19.99</p>
-
-                    </div>
-
-                </div>
-
-                <div class="product">
-
-                    <img src="product-image.jpg" class="card-img-top" alt="Product Image">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">Product Name</h5>
-
-                        <p class="card-text">$19.99</p>
-
-                    </div>
-
-                </div>
-
-                <div class="product">
-
-                    <img src="product-image.jpg" class="card-img-top" alt="Product Image">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">Product Name</h5>
-
-                        <p class="card-text">$19.99</p>
-
-                    </div>
-
-                </div>
-
-                <div class="product">
-
-                    <img src="product-image.jpg" class="card-img-top" alt="Product Image">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">Product Name</h5>
-
-                        <p class="card-text">$19.99</p>
-
-                    </div>
-
-                </div>
-
-            
+             
 
         </div>
     </div>
+
+    <footer class="bg-secondary pt-2 stifooterbg">
+        <div class="container">
+    
+    
+    
+            <!-- Divider -->
+            <!--<hr>-->
+    
+            <!-- Widgets START -->
+            <div class="row pt-5">
+                <!-- Footer Widget -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h5 class="mb-4 text-white">STI College</h5>
+                    <p class="text-white"><i class="fas fa-location-arrow"></i> Location: STI College Balagtas<br>
+                        <i class="fas fa-phone"></i> Phone : (044) 693-4246 / (044) 802-6462<br>
+                        <i class="fas fa-info-circle"></i> STI Helpdesk: <a href="#" class="btn-link" style="color:#fff200;">Click here</a></p>
+    
+                </div>
+    
+                <!-- Footer Widget -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h5 class="mb-4 text-white">Navigation</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="nav flex-column text-white-hover">
+                                <li class="nav-item btn-link"><a class="nav-link pt-0 " href="https://www.sti.edu/careers.asp">Careers</a></li>
+                                <li class="nav-item btn-link"><a class="nav-link" href="https://www.sti.edu/stiedu-disclosures_details.asp">Company Disclosures</a></li>
+                                <li class="nav-item btn-link"><a class="nav-link" href="https://www.sti.edu/payments/default.asp">Alternative Payment Service</a></li>
+                            </ul>
+                        </div>
+                         <div class="col-6">
+                            <ul class="nav flex-column text-white-hover">
+                                <li class="nav-item btn-link"><a class="nav-link" href="https://scope.sti.edu" target="_blank">SCOPE</a></li>
+                                <li class="nav-item btn-link"><a class="nav-link" href="https://scope.sti.edu/virtualcareercamp">Career Camp</a></li>
+                                <li class="nav-item btn-link"><a class="nav-link" href="https://www.sti.edu/campuses.asp">Campuses</a></li>
+                                <li class="nav-item btn-link"><a class="nav-link" href="https://i-cares.sti.edu/" target="_blank">I-CARES</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Footer Widget -->
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <h5 class="mb-4 text-white">Get Regular Updates</h5>
+                    <ul class="nav flex-column text-white-hover">
+                        <li class="nav-item btn-link"><a class="nav-link pt-0" href="https://www.facebook.com/sti.edu" target="_blank"><i class="fab fa-facebook "></i> Facebook</a></li>
+                        <li class="nav-item btn-link"><a class="nav-link" href="https://www.youtube.com/user/STIdotEdu" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        <li class="nav-item btn-link"><a class="nav-link" href="https://www.instagram.com/sti_college/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li class="nav-item btn-link"><a class="nav-link" href="https://twitter.com/sticollege" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li class="nav-item btn-link"><a class="nav-link" href="https://www.tiktok.com/@sti.edu" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                    </ul>
+                </div>
+    
+            </div>
+            <!-- Widgets END -->
+    
+    
+        </div>
+    
+        <!-- Footer copyright START -->
+        <div class="bg-dark-overlay-3 mt-5" style="background-color:#050d36;">
+            <div class="container">
+                <div class="row align-items-center justify-content-md-between py-4">
+                    <div class="col-md-6">
+                        <!-- Copyright -->
+                        <div class="text-center text-md-start text-white-hover text-muted">©2024 <a href="#" class="text-reset btn-link" target="_blank">STI Education Services Group, Inc.</a> All rights reserved
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-sm-flex align-items-center justify-content-center justify-content-md-end">
+    
+                        <!-- Links -->
+                      <ul class="nav text-primary-hover text-center text-sm-end justify-content-center justify-content-center mt-3 mt-md-0">
+    
+                      <li class="nav-item btn-link"><a class="nav-link" href="https://www.sti.edu/dataprivacy.asp">Privacy Policy</a></li>
+    
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer copyright END -->
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
