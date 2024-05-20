@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantify</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; /* Remove default margin */
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            background-image: url('https://www.sti.edu/uploads/Destination-Thumbnail-Photo-final.webp');
+            background-size: cover;
+        }
+
+        header {
+            background-color: #050d36;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        /* Adjust the default width of the sidebar */
+        .sidebar {
+            background-color: yellow;
+            padding: 1em;
+            width: 250px;
+            transition: width 0.3s;
+            overflow-y: auto;
+        }
+
+        /* Adjust the minimized width of the sidebar */
+        .sidebar.minimized {
+            width: 80px; /* Minimized width */
+            height: auto;
+            padding: 1em 0.5em;
+        }
+
+        #menuHeader {
+            height: 50px; /* Adjust the height according to your preference */
+            line-height: 50px; /* Center text vertically */
+            margin-top: 0; /* Reset margin */
+        }
+
+        .sidebar.minimized #menuHeader {
+            display: none;
+        }
+
+        .sidebar.minimized ul li a span {
+            display: none;
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+            display: inline;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 1em 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar ul li a i {
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        .toggle-btn {
+            display: block;
+            margin-bottom: 1em;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            font-size: 1.5em;
+            color: rgb(0, 0, 0); /* Change color to white for better visibility */
+            padding: 25px; /* Increase padding for larger clickable area */
+            border-radius: 5px; /* Add some border-radius for a softer look */
+        }
+
+        .sidebar ul li a:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        .sidebar .toggle-btn {
+            display: block;
+            margin-bottom: 1em;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            font-size: 1.5em;
+            
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 1em;
+        }
+
+        .main-content h2 {
+            margin-top: 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 10px;
+            border-radius: 1px;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            background-color: #f2f2f2;
+            color: black;
+            transition: border-color 0.3s;
+        }
+
+        .product:hover {
+            border-color: #4400ff;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-image {
+            width: 200px;
+            height: auto; 
+        }
+
+        .product-title {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .product-price {
+            margin-top: 5px;
+            color: #ff4500;
+        }
+
+        footer {
+            background-color: #050d36;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            padding: 5px 10px;
+            margin-bottom: 20px;
+        }
+
+        .search-bar i {
+            font-size: 1.2em;
+            color: #333;
+            margin-right: 10px;
+            
+        }
+
+        .search-bar input[type="text"] {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quantify</h1>
+    </header>
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <button class="toggle-btn smaller" onclick="toggleSidebar()"><i class="bi bi-list"></i></button>
+            <h2 id="menuHeader">Menu</h2>
+            <div class="search-bar">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+            <ul>
+                <li><a href="#"><i class="bi bi-person-video"></i> <span>Dashboard</span></a></li>
+                <li><a href="#"><i class="bi bi-people"></i> <span>Customers</span></a></li>
+                <li><a href="#"><i class="bi bi-box2"></i> <span>Products</span></a></li>
+                <li><a href="#"><i class="bi bi-bag-check"></i> <span>Orders</span></a></li>
+                <li><a href="#"><i class="bi bi-chat-left-text"></i> <span>Messages</span></a></li>
+                <li><a href="#"><i class="bi bi-box-arrow-left"></i> <span>Sign Out</span></a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="https://www.sti.edu/img/models/2018-model-ict.png" class="card-img-top product-image" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">BSIT Uniform</h5>
+                        <p class="card-text">Php 850.00</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://www.sti.edu/img/models/2018-model-ict.png" class="card-img-top product-image" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">BSIT Uniform</h5>
+                        <p class="card-text">Php 850.00</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://www.sti.edu/img/models/2018-model-ict.png" class="card-img-top product-image" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">BSIT Uniform</h5>
+                        <p class="card-text">Php 850.00</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://www.sti.edu/img/models/2018-model-ict.png" class="card-img-top product-image" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">BSIT Uniform</h5>
+                        <p class="card-text">Php 850.00</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://www.sti.edu/img/models/2018-model-ict.png" class="card-img-top product-image" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">BSIT Uniform</h5>
+                        <p class="card-text">Php 850.00</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://www.sti.edu/img/models/2018-model-ict.png" class="card-img-top product-image" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">BSIT Uniform</h5>
+                        <p class="card-text">Php 850.00</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 <a href="https://www.sti.edu/" style="color: white;">STI Education Services Group, Inc.</a> All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const searchbar = document.querySelector('.search-bar');
+    
+            sidebar.classList.toggle('minimized');
+            searchbar.style.display = sidebar.classList.contains('minimized') ? 'none' : 'flex';
+            
+            const menuHeader = document.getElementById('menuHeader');
+            menuHeader.style.display = sidebar.classList.contains('minimized') ? 'none' : 'inline';
+        }
+    </script>
+</body>
+</html>
